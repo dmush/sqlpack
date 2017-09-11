@@ -12,18 +12,19 @@ You use your preferred editor or IDE while SQLpack watches for file changes, bun
 
 It doesn't provide any GUI. It's just a bunlder and a script runner with a few useful extensions.
 
+## Installation
+
+Download the appropriate distribution from [releases](https://github.com/dmush/sqlpack/releases) page and copy `sqlpack` binary to your path.
+
+### Mac OS X
+
+Use Homebrew to install the package.
+
+```bash
+brew install dmush/homebrew-sqlpack/sqlpack
+``` 
+
 ## Getting started
-
-Set up the Go (see [Go's official instructions](https://golang.org/doc/install)) and install SQLpack.
-
-```bash
-go install github.com/dmush/sqlpack
-```
-
-Check that installation was successfull.
-```bash
-sqlpack -h
-```
 
 Clone the repo and open a folder containing it.
 
@@ -47,7 +48,7 @@ sqlpack -pg "user=postgres sslmode=disable" example/example.sql
 
 This will bundle the `example.sql` file and execute it in PostgreSQL.
 
-You also might want to try a testing mode. Execute the command below and try to edit `example/struct.sql` or `example/get_example_name.sql` (actually try to break something to fail test).
+You also might want to try a testing mode. Execute the command below and try to edit `example/struct.sql` or `example/get_example_name.sql` (actually try to break something to fail test) and save file.
 
 ```bash
 sqlpack test -pg "user=postgres" -w example
