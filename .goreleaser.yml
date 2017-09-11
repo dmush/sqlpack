@@ -1,0 +1,19 @@
+builds:
+  - goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+archive:
+  format_overrides:
+    - goos: windows
+      format: zip
+brew:
+  github:
+    owner: dmush
+    name: homebrew-sqlpack
+  homepage: https://github.com/dmush/sqlpack
+  description: PostgreSQL bundler
+  test: |
+    system "sqlpack -v"

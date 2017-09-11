@@ -1,0 +1,1 @@
+{{ include "./schema" "./get_example_name" }}
